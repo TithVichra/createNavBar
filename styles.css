@@ -6,22 +6,32 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+header {
+  width: 100%;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
   align-items: center;
-  /* border: 1px solid black; */
-  border-radius: 5px;
+  padding: 1rem;
   margin: 1rem;
+  border-radius: 5px;
   background-color: rgb(198, 152, 223);
 }
 
+/* Logo & Title */
 .title {
-  font-family: "Fira Sans", sans-serif;
-  font-size: 30px;
   display: flex;
   align-items: center;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 30px;
 }
 
 .title img {
@@ -30,23 +40,77 @@ nav {
   margin-right: 1rem;
 }
 
+/* Navigation */
 .navItems ul {
   display: flex;
   list-style: none;
   font-size: 30px;
 }
 
-ul li {
-  margin-right: 30px;
-  /* border: 1px solid black; */
-  padding: 0.5rem;
+.navItems ul li {
+  margin-left: 20px;
+  padding: 0.5rem 1rem;
   background-color: rgb(234, 178, 243);
   border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
-ul li:hover {
-  /* border: 1px solid black; */
-  border-radius: 5px;
-  padding: 0.5rem;
+.navItems ul li:hover {
   background-color: rgb(223, 124, 238);
+}
+
+/* Hero Section */
+.heroSection {
+  display: flex;
+  width: calc(100% - 2rem);
+  height: 80vh;
+  margin: 0 1rem;
+  gap: 1rem;
+}
+
+/* Left Panel */
+.leftPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.leftPanel img {
+  max-width: 100%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+/* Right Panel */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.rightPanel .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rightPanel h2 {
+  font-size: 3rem;
+}
+
+.rightPanel #name {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.rightPanel p {
+  font-size: 2rem;
 }
